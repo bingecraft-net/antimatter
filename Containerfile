@@ -55,7 +55,7 @@ RUN sed -i 's/^java/exec java/' server/run.sh
 
 COPY --from=build --chown=minecraft /git/dist/server server
 
-RUN curl -sfLo server/mods/pcf.jar https://cdn.modrinth.com/data/vDyrHl8l/versions/jfiEc2mQ/proxy-compatible-forge-1.1.7.jar
+RUN curl -sfLo server/mods/pcf.jar https://cdn.modrinth.com/data/vDyrHl8l/versions/82bwNhmQ/proxy-compatible-forge-1.2.1.jar
 
 COPY --chown=minecraft overrides server
 
