@@ -16,7 +16,7 @@ fi
 
 PCF_FILE=config/proxy-compatible-forge.toml
 if [ ! -f $PCF_FILE ] ; then
-  echo "[modernForwarding]\nforwardingSecret = \"$(cat /home/minecraft/secrets/forwarding.secret)\"" > $PCF_FILE
+  echo "[forwarding]\nsecret= \"$(cat /home/minecraft/secrets/forwarding.secret)\"" > $PCF_FILE
 fi
 
 if [ ! -f eula.txt ]; then
