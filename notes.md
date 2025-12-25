@@ -1,7 +1,27 @@
 # notes
 
-> Am I thinking about this right? I have two apps. One Minecraft reverse proxy and one Minecraft server. I want to expose only the RP to public traffic. I'm gunna deploy each as a coolify app, and create a coolify destination to bridge them together and allow the RP to forward traffic to the game server.
+I want to run antimatter Monifactory server in the cloud.
 
-From [Coolify docs for self-hosted install](https://coolify.io/docs/get-started/installation#self-hosted-installation):
+Login to VPS terminal:
 
-> curl -fsSL https://cdn.coollabs.io/coolify/install.sh | sudo bash
+```zsh
+ ssh ubuntu@51.81.201.208
+```
+
+## v1 to v2
+
+Goals:
+
+1. Connect via ip results in generic error
+1. Connect via host antimatter-v2 results in successful connection
+1. Restore from antimatter-v1 backup
+1. Connection quality is improved for other regions
+
+## declarative build and deploy
+
+Goals:
+
+1. When change pushed to git then the change is built and deployed to target server
+1. Minimize downtime
+1. Backup before applying each change
+1. New changes use latest backup
