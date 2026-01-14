@@ -2,7 +2,7 @@ FROM ubuntu:noble AS base
 
 RUN apt-get update && \
     apt-get upgrade -y && \
-    apt-get install -y curl git openjdk-21-jdk zsh && \
+    apt-get install -y curl git openjdk-25-jre-headless zsh && \
     apt-get clean
 
 FROM base AS build
