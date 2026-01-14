@@ -39,7 +39,7 @@ RUN curl -sLO https://github.com/itzg/rcon-cli/releases/download/$RCON_CLI_VERSI
 
 ENV MINECRAFT_VERSION=1.20.1
 
-ENV FORGE_VERSION=47.4.0
+ENV FORGE_VERSION=47.4.10
 
 RUN curl -sLo /opt/forge-installer.jar https://maven.minecraftforge.net/net/minecraftforge/forge/$MINECRAFT_VERSION-$FORGE_VERSION/forge-$MINECRAFT_VERSION-$FORGE_VERSION-installer.jar
 
