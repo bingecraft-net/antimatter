@@ -7,8 +7,6 @@ RUN apt-get update && \
 
 FROM base AS build
 
-ARG COMMIT
-
 ARG NODE_VERSION=23
 
 RUN apt-get update && \
@@ -21,6 +19,8 @@ RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | b
 RUN git clone https://github.com/ThePansmith/Monifactory /git
 
 WORKDIR /git/build
+
+ARG COMMIT
 
 RUN git fetch --depth=1 origin $COMMIT
 
