@@ -20,11 +20,11 @@ RUN git clone https://github.com/ThePansmith/Monifactory /git
 
 WORKDIR /git/build
 
-ARG COMMIT
+ARG refspec
 
-RUN git fetch --depth=1 origin $COMMIT
+RUN git fetch --depth=1 origin $refspec
 
-RUN git checkout $COMMIT
+RUN git checkout $refspec
 
 RUN bash -c "source /root/.nvm/nvm.sh && npm install && node index.ts build-server"
 
